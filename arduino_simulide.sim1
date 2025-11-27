@@ -1,0 +1,13 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-104,-112" rotation="0" hflip="1" vflip="1" label="Uno-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="firmware/build/arduino.avr.uno/firmware.ino.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="SerialPort" CircId="SerialPort-7" mainComp="false" Show_id="false" Show_Val="false" Pos="-60,-192" rotation="0" hflip="1" vflip="1" label="SerialPort-7" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Auto="true" Port="COM1" Baudrate="9600 _Bd" DataBits="8 _bits" StopBits="1 _bits" SerialMon="false" />
+
+<item itemtype="Connector" uid="Connector-17" startpinid="SerialPort-7-pin1" endpinid="Uno-1-1" pointList="-100,-184,-124,-184,-124,-88,-96,-88" />
+
+<item itemtype="Connector" uid="Connector-18" startpinid="SerialPort-7-pin0" endpinid="Uno-1-0" pointList="-100,-200,-140,-200,-140,-96,-96,-96" />
+
+</circuit>
