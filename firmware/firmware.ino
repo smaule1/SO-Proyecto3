@@ -1,4 +1,7 @@
-
+int btnTask = 3;
+int btnSuspend = 4;
+int btnRestart = 5;
+int btnShutdown = 6;
 
 void setup() {
   Serial.begin(9600); // Start serial communication at 9600 baud
@@ -8,14 +11,14 @@ void setup() {
 bool connected = false;
 
 void loop() {
-  //Establish connection
-  if(!connected){
-    Serial.print("ping");
-    if(Serial.available() > 0){
-      String str = Serial.readString();
-      connected = str == "pong";
-    }    
+  if(digitalRead(btnTask) == HIGH){
+    Serial.print("1");
+  } else if (digitalRead(btnSuspend) == HIGH){
+    Serial.print("2");
+  } else if (digitalRead(btnRestart) == HIGH){
+    Serial.print("3");
+  } else if (digitalRead(btnShutdown) == HIGH){
+    Serial.print("4");
   }
-
   delay(100);
 }
